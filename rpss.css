@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding : 0;
+    border-sizing: border-box;
+    font-family: Montserrat;
+}
+header{
+    background: white;
+    color: darkorange;
+    text-align: center;
+    font-size: 25px;
+    padding: 1.5vw;
+    font-weight: 500;
+}
+body{
+    color: white;
+    background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+    background-size: 300% 300%;
+    animation: MoveBG 10s ease infinite;
+}
+.U{
+    margin:50px 0 0 50px;
+    border: 3px solid white;
+    border-radius:20px;
+    width:200px;
+    padding:50px;
+    float:left;
+    text-align: center;
+    font-size: 20px;
+}
+.C{
+    margin:50px 50px 0 0;
+    border: 3px solid white;
+    border-radius:20px;
+    width:200px;
+    padding:50px;
+    float:right;
+    text-align: center;
+    font-size: 20px;
+}
+@keyframes MoveBG {
+    0%{
+        background-position: 0% 84%;
+    }
+    50%{
+        background-position: 100% 16%;
+    }
+    100%{
+        background-position: 0% 84%;
+    }
+}
+.scoreboard{
+    border: 3px solid white;
+    width: 14%;
+    height: 80px;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 20px;
+    padding: 2%;
+}
+.badge{
+    background-color: darkorange;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+#user-label{
+    position: relative;
+    right: 32.5%;
+    width: 55px;
+    top: 22.5%;
+}
+
+#comp-label{
+position: relative;
+    left: 97%;
+    bottom: 32.5%;
+    width: 60px;
+}
+.score{
+    position: relative;
+    bottom: 90%;
+    font-size: 45px;
+    font-weight: 900;
+}
+.result{
+    padding-top: 3%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.choices{
+    margin: 60px 0;
+    text-align: center;
+}
+.choices:visited{
+
+}
+.choice{
+    display: inline-block;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 20px;
+}
+#img-rock{
+    width: 105%;
+}
+#img-paper{
+    padding-bottom: 10px;
+}
+.rock:hover,.paper:hover,.scissor:hover{
+    transform: scale(1.2);
+    transition: all 150ms ease;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1200px) {
+    header{
+        width: 100vw;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .players{
+        display: flex;
+        margin-top: 40px;
+    }
+    .U,.C{
+        flex-shrink: 1;
+        margin: 15px;
+        width: 20vw;
+        padding: 30px;
+    }
+    .scoreboard{
+        width: 35%;
+        padding: 5%;
+    }
+    #user-label{
+        width: 45px;
+    }
+    #comp-label{
+        width: 55px;
+    }
+
+}
+
